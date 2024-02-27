@@ -3,24 +3,36 @@ using TaskManagementApp.Models;
 
 namespace TaskManagementApp.Services
 {
-    public static class ChoreJsonService
+    public interface IChoreJsonService
     {
-        private static string _JsonFilePath
+        public IEnumerable<Chore> GetChores();
+
+        public bool SaveChoresToDB(IEnumerable<Chore> chores);
+    }
+
+    public class ChoreJsonService : IChoreJsonService
+    {
+        public ChoreJsonService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        private readonly IConfiguration _configuration;
+
+        private string _JsonFilePath
         {
             get
             {
-                
-                string path = Environment.GetEnvironmentVariable("JsonData__Chore");
-                //string path = "wwwroot/data/ChoresData.json";
+                string path = _configuration.GetValue<string>("JsonData:Chore") ?? "wwwroot/data/ChoresData.json";
                 return path;
             }
         }
 
-        public static IEnumerable<Chore> GetChores()
+        public IEnumerable<Chore> GetChores()
         {
             try
             {
-                if (!File.Exists(_JsonFilePath))
+                if (string.IsNullOrEmpty(_JsonFilePath) || !File.Exists(_JsonFilePath))
                 {
                     Console.WriteLine($"Error: JSON file path is invalid or file does not exist. Path: {_JsonFilePath}");
                     return Enumerable.Empty<Chore>();
@@ -38,7 +50,7 @@ namespace TaskManagementApp.Services
             }
         }
 
-        public static bool SaveChoresToDB(IEnumerable<Chore> chores)
+        public bool SaveChoresToDB(IEnumerable<Chore> chores)
         {
             if (chores == null)
                 return false;
@@ -51,8 +63,13 @@ namespace TaskManagementApp.Services
                     return false;
                 }
 
-                string jsonData = JsonSerializer.Serialize(chores);
-                File.WriteAllText(jsonData, _JsonFilePath);
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                string jsonData = JsonSerializer.Serialize(chores, options);
+                File.WriteAllText(_JsonFilePath, jsonData);
 
                 return true;
             }

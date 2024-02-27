@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IUserJsonService, UserJsonService>();
+builder.Services.AddScoped<IChoreJsonService, ChoreJsonService>();
 builder.Services.AddScoped<ITestService, TestService>();
 
 var app = builder.Build();

@@ -14,7 +14,7 @@ namespace TaskManagementApp.Models
         [Required]
         public string Password { get; set; } = string.Empty;
 
-        public IEnumerable<int> ChoreIDs { get; set; }
+        public ICollection<int> ChoreIDs { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize<User>(this);
 

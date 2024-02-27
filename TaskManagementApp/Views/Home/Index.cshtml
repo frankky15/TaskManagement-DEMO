@@ -4,13 +4,16 @@
 
 <div class="text-center">
     <h1 class="display-4">Wellcome to Task Manager</h1>
-    <p>Before using, we encourage you to visit the <a href="./home/Instructions">Instructions</a> page.</p>
+    <p>Before using, we encourage you to visit the <a asp-controller="home" asp-action="instructions">Instructions</a> page.</p>
     <p class=".small">Where you'll find everythign you need!</p>
 
     <hr />
     <br />
 
 
-    <p>If you are ready, go to the <a href="./ToDo/index" class="btn btn-primary" role="button">Task Manager</a> page.</p>
+    <p>If you are ready, go to the <a class="btn btn-primary" role="button" asp-controller="todo" asp-action="index">Task Manager</a> page.</p>
 </div>
 
+<br />
+
+<a class="btn btn-link" role="button" asp-controller="home" asp-action="test">Test</a>

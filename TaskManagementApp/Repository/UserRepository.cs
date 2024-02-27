@@ -19,17 +19,7 @@ namespace TaskManagementApp.Repository
             throw new NotImplementedException();
         }
 
-        public bool Delete(User entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Delete(Expression<Func<User, bool>> where)
-        {
-            throw new NotImplementedException();
-        }
-
-        public User Get(Expression<Func<User, bool>> where)
+        public User Get(Expression<Func<User, bool>> _where)
         {
             throw new NotImplementedException();
         }
@@ -44,12 +34,12 @@ namespace TaskManagementApp.Repository
             throw new NotImplementedException();
         }
 
-        public ICollection<User> GetMany(Expression<Func<User, bool>> where)
+        public ICollection<User> GetMany(Expression<Func<User, bool>> _where)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(User entity)
+        public bool UpdateChores(ICollection<int> ids)
         {
             throw new NotImplementedException();
         }

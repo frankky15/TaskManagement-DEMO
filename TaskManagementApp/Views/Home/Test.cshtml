@@ -1,7 +1,20 @@
-﻿@{
+﻿@model List<Chore>
+
+@{
     ViewData["Title"] = "Test";
 }
 
 @section title {
         <h1>@ViewData["Title"]</h1>
 }
+
+<ul>
+    @foreach (var chore in Model)
+    {
+        <li>
+            @chore.Title
+                    <a class="btn btn-link" role="button" asp-controller="home" asp-action="description" asp-route-id="@chore.ID">Description</a>
+                    <a class="btn btn-link" role="button" asp-controller="home" asp-action="deletechore" asp-route-id="@chore.ID">Delete</a>
+        </li>
+    }
+</ul>

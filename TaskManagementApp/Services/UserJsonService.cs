@@ -3,19 +3,32 @@ using TaskManagementApp.Models;
 
 namespace TaskManagementApp.Services
 {
-    public static class UserJsonService
+    public interface IUserJsonService
     {
-        private static string _JsonFilePath
+        public IEnumerable<User> GetUsers();
+
+        public bool SaveUsersToDB(IEnumerable<User> users);
+    }
+
+    public class UserJsonService : IUserJsonService
+    {
+        public UserJsonService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        private readonly IConfiguration _configuration;
+
+        private string _JsonFilePath
         {
             get
             {
-                //string path = Environment.GetEnvironmentVariable("JsonData__User") ?? "wwwroot/data/UsersData.json";
-                string path = Environment.GetEnvironmentVariable("JsonData__User");
+                string path = _configuration.GetValue<string>("JsonData:User") ?? "wwwroot/data/UsersData.json";
                 return path;
             }
         }
 
-        public static IEnumerable<User> GetUsers()
+        public IEnumerable<User> GetUsers()
         {
             try
             {
@@ -37,7 +50,7 @@ namespace TaskManagementApp.Services
             }
         }
 
-        public static bool SaveUsersToDB(IEnumerable<User> users)
+        public bool SaveUsersToDB(IEnumerable<User> users)
         {
             if (users == null)
                 return false;
@@ -50,8 +63,13 @@ namespace TaskManagementApp.Services
                     return false;
                 }
 
-                string jsonData = JsonSerializer.Serialize(users);
-                File.WriteAllText(jsonData, _JsonFilePath);
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                string jsonData = JsonSerializer.Serialize(users, options);
+                File.WriteAllText(_JsonFilePath, jsonData);
 
                 return true;
             }

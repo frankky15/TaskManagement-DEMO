@@ -34,7 +34,25 @@ namespace TaskManagementApp.Controllers
 
         public IActionResult Test()
         {
-            return View();
+            var chores = _testService.GetChores();
+            return View(chores);
+        }
+
+        public IActionResult Description(int id)
+        {
+            var chore = _testService.GetChoreById(id);
+            return View(chore);
+        }
+
+        public IActionResult DeleteChore(int id)
+        {
+            string message = "Chore Successfully deleted";
+
+            var chore = _testService.GetChoreById(id);
+            if (!_testService.DeleteChore(chore))
+                message = "There was a problem while trying to delete the chore";
+
+            return View((object)message);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

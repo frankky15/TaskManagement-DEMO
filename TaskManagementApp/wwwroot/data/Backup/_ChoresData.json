@@ -1,5 +1,29 @@
 [
   {
+    "ID": 1,
+    "Title": "Clean the kitchen",
+    "Description": "Wash dishes, wipe countertops, and sweep the floor.",
+    "DueDate": "2024-03-03T00:00:00",
+    "IsCompleted": false,
+    "UserID": 1
+  },
+  {
+    "ID": 2,
+    "Title": "Take out the trash",
+    "Description": "Empty all trash cans and take the bags to the dumpster.",
+    "DueDate": "2024-03-02T00:00:00",
+    "IsCompleted": false,
+    "UserID": 1
+  },
+  {
+    "ID": 3,
+    "Title": "Mow the lawn",
+    "Description": "Use the lawnmower to cut the grass in the front and back yard.",
+    "DueDate": "2024-03-05T00:00:00",
+    "IsCompleted": false,
+    "UserID": 1
+  },
+  {
     "ID": 4,
     "Title": "Vacuum the living room",
     "Description": "Vacuum the carpet and clean any visible debris.",
@@ -28,6 +52,14 @@
     "Title": "Organize the pantry",
     "Description": "Arrange food items neatly and check for expired products.",
     "DueDate": "2024-03-08T00:00:00",
+    "IsCompleted": false,
+    "UserID": 3
+  },
+  {
+    "ID": 8,
+    "Title": "Clean the bathroom",
+    "Description": "Scrub the toilet, sink, shower, and bathtub.",
+    "DueDate": "2024-03-10T00:00:00",
     "IsCompleted": false,
     "UserID": 3
   },
