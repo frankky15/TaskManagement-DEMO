@@ -1,3 +1,4 @@
+using TaskManagementApp.Data;
 using TaskManagementApp.Interfaces;
 using TaskManagementApp.Repository;
 using TaskManagementApp.Services;
@@ -9,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUserJsonService, UserJsonService>();
 builder.Services.AddScoped<IChoreJsonService, ChoreJsonService>();
 builder.Services.AddScoped<ITestService, TestService>();
+//builder.Services.AddSingleton<IInMemoryDB, InMemoryDB>();
 
 var app = builder.Build();
 

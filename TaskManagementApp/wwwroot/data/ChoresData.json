@@ -1,25 +1,9 @@
 [
   {
-    "ID": 4,
-    "Title": "Vacuum the living room",
-    "Description": "Vacuum the carpet and clean any visible debris.",
-    "DueDate": "2024-03-01T00:00:00",
-    "IsCompleted": false,
-    "UserID": 2
-  },
-  {
     "ID": 5,
     "Title": "Do the laundry",
     "Description": "Wash, dry, and fold the clothes.",
     "DueDate": "2024-03-04T00:00:00",
-    "IsCompleted": false,
-    "UserID": 2
-  },
-  {
-    "ID": 6,
-    "Title": "Water the plants",
-    "Description": "Check the soil moisture and water the indoor and outdoor plants as needed.",
-    "DueDate": "2024-03-06T00:00:00",
     "IsCompleted": false,
     "UserID": 2
   },

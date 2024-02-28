@@ -18,11 +18,34 @@ namespace TaskManagementApp.Repository
 
         public bool Add(Chore entity)
         {
+            if (entity == null)
+                return false;
+
             try
             {
-                if (!_inMemoryDB.AddChore(entity))
+                if (string.IsNullOrEmpty(entity.Title))
+                {
+                    Console.WriteLine("Error: Title is null or empty.");
                     return false;
+                }
 
+                if (entity.Description == null) //Description is Optional and can be empty.
+                {
+                    Console.WriteLine("Error: description is null.");
+                    return false;
+                }
+
+                if (!IdExists(entity.UserID))
+                {
+                    Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
+                    return false;
+                }
+
+                var maxID = _inMemoryDB.Chores.Max(x => x.ID);
+                entity.ID = maxID + 1;
+
+                _inMemoryDB.Chores.Add(entity);
+                _inMemoryDB.SaveDB();
                 return true;
             }
             catch (Exception ex)
@@ -30,18 +53,31 @@ namespace TaskManagementApp.Repository
                 Console.WriteLine($"Error: There was a problem while trying to add a chore. Exeption: {ex}");
                 return false;
             }
-
         }
 
         public bool Delete(Chore entity)
         {
+            if (entity == null)
+                return false;
+
             try
             {
-                if (!_inMemoryDB.DeleteChore(entity))
+                if (!_inMemoryDB.Chores.Remove(entity))
                 {
-                    Console.WriteLine($"Error: ChoreTitle: {entity.Title} does not exist in the db.");
+                    Console.WriteLine("Error: could not remove chore from db.");
                     return false;
                 }
+
+                if (!IdExists(entity.UserID))
+                {
+                    Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
+                    return false;
+                }
+
+                var targetUser = _inMemoryDB.Users.Where(x => x.ID == entity.UserID).First();
+                targetUser.ChoreIDs.Remove(entity.ID);
+
+                _inMemoryDB.SaveDB();
 
                 return true;
             }
@@ -62,8 +98,7 @@ namespace TaskManagementApp.Repository
 
                 foreach (var chore in filteredChores)
                 {
-                    if (!_inMemoryDB.DeleteChore(chore))
-                        return false;
+                    Delete(chore);
                 }
 
                 return true;
@@ -82,6 +117,12 @@ namespace TaskManagementApp.Repository
                 var queryableChores = _inMemoryDB.Chores.AsQueryable();
 
                 var filteredChores = queryableChores.Where(_where);
+
+                if (filteredChores.Count() == 0)
+                {
+                    Console.WriteLine("Error: Couldn't find a chore that met the criteria.");
+                    return null;
+                }
 
                 return filteredChores.First();
             }
@@ -102,18 +143,21 @@ namespace TaskManagementApp.Repository
             {
                 Console.WriteLine("Warning: Empty Chore Data Base.");
 
-                return new List<Chore>();
+                return null;
             }
         }
 
         public Chore GetById(int id)
         {
-            var chore = from obj in _inMemoryDB.Chores
-                        where obj.ID == id
-                        select obj;
+            var chore = from _chore in _inMemoryDB.Chores
+                        where _chore.ID == id
+                        select _chore;
 
             if (chore.Count() == 0)
+            {
+                Console.WriteLine($"Error: Couldn't find Chore with ID: {id}");
                 return null;
+            }
 
             if (chore.Count() > 1)
             {
@@ -129,18 +173,63 @@ namespace TaskManagementApp.Repository
 
             var filteredChores = queryableChores.Where(_where).ToList();
 
+            if (filteredChores.Count() == 0)
+            {
+                Console.WriteLine("Error: Couldn't find any chores that met the criteria.");
+                return null;
+            }
+
             return filteredChores;
         }
 
         public bool Update(Chore entity)
         {
-            if (!_inMemoryDB.UpdateChore(entity))
+            if (entity == null)
+                return false;
+
+            try
             {
-                Console.WriteLine($"Error: Couldn't update Chore. ChoreID: {entity.ID}");
+                if (!IdExists(entity.ID))
+                {
+                    Console.WriteLine($"Error: Chore with ID: {entity.ID} does not exist.");
+                }
+
+                if (string.IsNullOrEmpty(entity.Title))
+                {
+                    Console.WriteLine("Error: Title is null or empty.");
+                    return false;
+                }
+
+                if (entity.Description == null) //Description is Optional and can be empty.
+                {
+                    Console.WriteLine("Error: description is null.");
+                    return false;
+                }
+
+                var chore = GetById(entity.ID);
+
+                chore.Title = entity.Title;
+                chore.Description = entity.Description;
+                chore.DueDate = entity.DueDate;
+                chore.IsCompleted = entity.IsCompleted;
+
+                _inMemoryDB.SaveDB();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine();
                 return false;
             }
 
             return true;
+        }
+
+        public bool IdExists(int id)
+        {
+            if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
+                return true;
+
+            return false;
         }
     }
 }

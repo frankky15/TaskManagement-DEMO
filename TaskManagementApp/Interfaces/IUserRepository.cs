@@ -4,6 +4,6 @@ namespace TaskManagementApp.Interfaces
 {
 	public interface IUserRepository : IRepository<User>
 	{
-        bool UpdateChores(ICollection<int> ids);
+        bool UpdateChores(ICollection<int> choreIds, int userId);
     }
 }
