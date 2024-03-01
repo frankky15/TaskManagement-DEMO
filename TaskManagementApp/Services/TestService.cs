@@ -17,11 +17,11 @@ namespace TaskManagementApp.Services
         private UserRepository _UserRepository { get; set; }
         private InMemoryDB _InMemoryDB { get; set; }
 
-        public TestService(IUserJsonService userJsonService, IChoreJsonService choreJsonService)
+        public TestService(InMemoryDB db)
         {
             try
             {
-                _InMemoryDB = new InMemoryDB(userJsonService, choreJsonService);
+                _InMemoryDB = db;
 
                 _ChoreRepository = new ChoreRepository(_InMemoryDB);
                 _UserRepository = new UserRepository(_InMemoryDB);
