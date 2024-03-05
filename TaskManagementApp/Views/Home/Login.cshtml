@@ -1,0 +1,33 @@
+﻿@model UserCredentials
+
+@{
+	ViewData["Title"] = "Log In | Task Manager";
+}
+
+@section title {
+	<h1>Log In</h1>
+}
+
+<form method="post" asp-controller="home" asp-action="login">
+	<table class="table">
+		<tr>
+			<th>
+				<label asp-for="Email" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="text" asp-for="Email" class="form-control" />
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label asp-for="Password" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="password" asp-for="Password" class="form-control" />
+			</td>
+		</tr>
+	</table>
+
+	<input type="submit" class="btn btn-primary" value="Log In" />
+</form>

@@ -31,6 +31,18 @@ namespace TaskManagementApp.Repository
                 if (string.IsNullOrEmpty(entity.Password))
                     return false;
 
+                if (Get(x => x.Username == entity.Username) != null)
+                {
+                    Console.WriteLine("Error: Username already exists");
+                    return false;
+                }
+
+                if (Get(x => x.Email == entity.Email) != null)
+                {
+                    Console.WriteLine("Error: A user with that Email already exists");
+                    return false;
+                }
+
                 var maxID = _inMemoryDB.Users.Max(x => x.ID);
                 entity.ID = maxID + 1;
 
@@ -85,8 +97,8 @@ namespace TaskManagementApp.Repository
         public User GetById(int id)
         {
             var user = from _user in _inMemoryDB.Users
-                        where _user.ID == id
-                        select _user;
+                       where _user.ID == id
+                       select _user;
 
             if (user.Count() == 0)
             {

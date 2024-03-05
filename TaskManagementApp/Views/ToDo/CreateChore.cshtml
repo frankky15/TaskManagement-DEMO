@@ -1,0 +1,45 @@
+﻿@model Chore
+
+@{
+	ViewData["Title"] = "Create Chore | Task Manager ";
+}
+
+@section title {
+	<div class="text-center">
+		<h2>Create Chore</h2>
+	</div>
+}
+
+<form method="post" asp-controller="todo" asp-action="createchore">
+	<table class="table">
+		<tr>
+			<th>
+				<label asp-for="Title" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="text" asp-for="Title" class="form-control" />
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label asp-for="Description" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="text" asp-for="Description" class="form-control" />
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label asp-for="DueDate" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="date" asp-for="DueDate" class="form-control" />
+			</td>
+		</tr>
+
+	</table>
+
+	<input type="submit" class="btn btn-primary" value="Save" />
+</form>

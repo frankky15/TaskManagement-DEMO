@@ -1,0 +1,46 @@
+﻿@model User
+
+@{
+	ViewData["Title"] = "Register | Task Manager";
+}
+
+@section title {
+	<h1>Register User</h1>
+}
+
+<form method="post" asp-controller="home" asp-action="register">
+	<table class="table">
+		<tr>
+			<th>
+				<label asp-for="Username" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="text" asp-for="Username" class="form-control" />
+				<span asp-validation-for="Username" class="text-danger"></span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label asp-for="Email" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="text" asp-for="Email" class="form-control" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</td>
+		</tr>
+
+		<tr>
+			<th>
+				<label asp-for="Password" class="col-form-label"></label>
+			</th>
+			<td>
+				<input type="password" asp-for="Password" class="form-control" />
+				<span asp-validation-for="Password" class="text-danger"></span>
+			</td>
+		</tr>
+
+	</table>
+
+	<input type="submit" class="btn btn-primary" value="Register" />
+</form>

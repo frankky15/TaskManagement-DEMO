@@ -4,7 +4,9 @@
     "Username": "user1",
     "Email": "user1@example.com",
     "Password": "password1",
-    "ChoreIDs": []
+    "ChoreIDs": [
+      3
+    ]
   },
   {
     "ID": 2,
@@ -12,7 +14,9 @@
     "Email": "user2@example.com",
     "Password": "password2",
     "ChoreIDs": [
-      5
+      4,
+      5,
+      6
     ]
   },
   {
@@ -22,8 +26,16 @@
     "Password": "password3",
     "ChoreIDs": [
       7,
+      8,
       9,
       10
     ]
+  },
+  {
+    "ID": 4,
+    "Username": "user4",
+    "Email": "user4@example.com",
+    "Password": "password4",
+    "ChoreIDs": []
   }
 ]

@@ -1,0 +1,54 @@
+﻿@model Chore
+
+@{
+    ViewData["Title"] = "Chore Details | Task Manager";
+}
+
+@section title {
+    <h1>Chore Details</h1>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            <h4>Title </h4>
+        </th>
+        <td>
+            <p>@Model.Title</p>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            <h4>Description </h4>
+        </th>
+        <td>
+            <p>@Model.Description</p>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            <h4>Due Date </h4>
+        </th>
+        <td>
+            <p>@Model.DueDate</p>
+        </td>
+    </tr>
+
+    <tr>
+        <th>
+            <h4>Compleded </h4>
+        </th>
+        <td>
+            @if (@Model.IsCompleted)
+            {
+                <p>Yes</p>
+            }
+            else
+            {
+                <p>No</p>
+            }
+        </td>
+    </tr>
+</table>

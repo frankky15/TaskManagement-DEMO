@@ -1,0 +1,18 @@
+﻿@model Chore
+
+@{
+	ViewData["Title"] = "Delete Chore | Task Manager";
+}
+
+@section title {
+	<div class="text-center">
+		<h2>Are you sure you want to delete chore: <span class="text-primary-emphasis">@Model.Title</span> ?</h2>
+	</div>
+}
+
+
+<div class="btn-group" role="group">
+	<a class="btn btn-primary" role="button" asp-controller="todo" asp-action="index">No, Go Back to Chores</a>
+	<a class="btn btn-danger" role="button" asp-controller="todo" asp-action="deletechore" asp-route-id="@Model.ID">Yes,
+		Delete</a>
+</div>

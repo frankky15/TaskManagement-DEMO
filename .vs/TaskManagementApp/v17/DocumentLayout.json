@@ -3,88 +3,52 @@
   "WorkspaceRootPath": "E:\\VisualStudio Projects\\TaskManagementApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\services\\testservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\services\\testservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\data\\inmemorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\data\\inmemorydb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\services\\chorejsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\services\\chorejsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\repository\\chorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\repository\\chorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\wwwroot\\data\\choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\wwwroot\\data\\choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\wwwroot\\data\\usersdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\wwwroot\\data\\usersdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\wwwroot\\data\\choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\wwwroot\\data\\choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\wwwroot\\data\\backup\\_usersdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\wwwroot\\data\\backup\\_usersdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\wwwroot\\data\\backup\\_choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\wwwroot\\data\\backup\\_choresdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\models\\chore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\models\\chore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\interfaces\\ichorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\interfaces\\ichorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\services\\userjsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\services\\userjsonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\views\\home\\test.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\views\\home\\test.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\views\\home\\deletechore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\views\\home\\deletechore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\views\\home\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\views\\home\\description.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|e:\\visualstudio projects\\taskmanagementapp\\taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{633EEADC-B2DA-4F03-A566-0C9D800BDDDF}|TaskManagementApp\\TaskManagementApp.csproj|solutionrelative:taskmanagementapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,240 +58,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 273,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DeleteChore.cshtml",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\DeleteChore.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Views\\Home\\DeleteChore.cshtml",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\DeleteChore.cshtml",
-              "RelativeToolTip": "TaskManagementApp\\Views\\Home\\DeleteChore.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-25T19:22:27.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Description.cshtml",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Description.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Views\\Home\\Description.cshtml",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Description.cshtml",
-              "RelativeToolTip": "TaskManagementApp\\Views\\Home\\Description.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-25T18:32:16.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Test.cshtml",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Test.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Views\\Home\\Test.cshtml",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Test.cshtml",
-              "RelativeToolTip": "TaskManagementApp\\Views\\Home\\Test.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-25T16:27:40.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "TaskManagementApp\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Interfaces\\IUserService.cs",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "TaskManagementApp\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T16:24:23.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "TaskManagementApp\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-25T16:13:50.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Interfaces\\IRepository.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "TaskManagementApp\\Interfaces\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T22:42:15.986Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IChoreRepository.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IChoreRepository.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Interfaces\\IChoreRepository.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IChoreRepository.cs",
-              "RelativeToolTip": "TaskManagementApp\\Interfaces\\IChoreRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T17:52:59.909Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "TaskManagementApp\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T18:01:16.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserJsonService.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\UserJsonService.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Services\\UserJsonService.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\UserJsonService.cs",
-              "RelativeToolTip": "TaskManagementApp\\Services\\UserJsonService.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T18:44:57.326Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChoreJsonService.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\ChoreJsonService.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Services\\ChoreJsonService.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\ChoreJsonService.cs",
-              "RelativeToolTip": "TaskManagementApp\\Services\\ChoreJsonService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T18:19:40.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InMemoryDB.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Data\\InMemoryDB.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Data\\InMemoryDB.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Data\\InMemoryDB.cs",
-              "RelativeToolTip": "TaskManagementApp\\Data\\InMemoryDB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T23:17:09.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ChoreRepository.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Repository\\ChoreRepository.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Repository\\ChoreRepository.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Repository\\ChoreRepository.cs",
-              "RelativeToolTip": "TaskManagementApp\\Repository\\ChoreRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:23:39.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T18:46:26.934Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Repository\\UserRepository.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Repository\\UserRepository.cs",
-              "RelativeToolTip": "TaskManagementApp\\Repository\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIMAAAAkAAAA",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Services\\UserService.cs",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\UserService.cs",
+              "RelativeToolTip": "TaskManagementApp\\Services\\UserService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T17:24:08.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-04T18:46:13.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TestService.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\TestService.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Services\\TestService.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Services\\TestService.cs",
-              "RelativeToolTip": "TaskManagementApp\\Services\\TestService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T02:48:16.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Program.cs",
-              "RelativeDocumentMoniker": "TaskManagementApp\\Program.cs",
-              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Program.cs",
-              "RelativeToolTip": "TaskManagementApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-24T02:15:58.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 1,
               "Title": "ToDoController.cs",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\ToDoController.cs",
               "RelativeDocumentMoniker": "TaskManagementApp\\Controllers\\ToDoController.cs",
               "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\ToDoController.cs",
               "RelativeToolTip": "TaskManagementApp\\Controllers\\ToDoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T22:57:29.661Z"
+              "WhenOpened": "2024-03-04T18:48:44.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TaskManagementApp\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T16:24:23.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Program.cs",
+              "RelativeDocumentMoniker": "TaskManagementApp\\Program.cs",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Program.cs",
+              "RelativeToolTip": "TaskManagementApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-24T02:15:58.894Z"
             }
           ]
         },
         {
           "DockedWidth": 127,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
+              "Title": "_UsersData.json",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\Backup\\_UsersData.json",
+              "RelativeDocumentMoniker": "TaskManagementApp\\wwwroot\\data\\Backup\\_UsersData.json",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\Backup\\_UsersData.json",
+              "RelativeToolTip": "TaskManagementApp\\wwwroot\\data\\Backup\\_UsersData.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T15:07:46.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ChoresData.json",
+              "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\Backup\\_ChoresData.json",
+              "RelativeDocumentMoniker": "TaskManagementApp\\wwwroot\\data\\Backup\\_ChoresData.json",
+              "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\Backup\\_ChoresData.json",
+              "RelativeToolTip": "TaskManagementApp\\wwwroot\\data\\Backup\\_ChoresData.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-02T15:07:04.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Chore.cs",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Models\\Chore.cs",
               "RelativeDocumentMoniker": "TaskManagementApp\\Models\\Chore.cs",
               "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Models\\Chore.cs",
               "RelativeToolTip": "TaskManagementApp\\Models\\Chore.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T17:28:47.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Models\\User.cs",
               "RelativeDocumentMoniker": "TaskManagementApp\\Models\\User.cs",
               "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\Models\\User.cs",
               "RelativeToolTip": "TaskManagementApp\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-23T22:12:33.71Z"
+              "WhenOpened": "2024-02-23T22:12:33.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\appsettings.json",
               "RelativeDocumentMoniker": "TaskManagementApp\\appsettings.json",
@@ -335,30 +186,29 @@
               "RelativeToolTip": "TaskManagementApp\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-02-22T18:24:48.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-22T18:24:48.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "ChoresData.json",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\ChoresData.json",
               "RelativeDocumentMoniker": "TaskManagementApp\\wwwroot\\data\\ChoresData.json",
               "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\ChoresData.json",
               "RelativeToolTip": "TaskManagementApp\\wwwroot\\data\\ChoresData.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-02-24T01:44:58.42Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "UsersData.json",
               "DocumentMoniker": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\UsersData.json",
               "RelativeDocumentMoniker": "TaskManagementApp\\wwwroot\\data\\UsersData.json",
               "ToolTip": "E:\\VisualStudio Projects\\TaskManagementApp\\TaskManagementApp\\wwwroot\\data\\UsersData.json",
               "RelativeToolTip": "TaskManagementApp\\wwwroot\\data\\UsersData.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-02-24T02:09:57.695Z"
             }

@@ -41,7 +41,11 @@ namespace TaskManagementApp.Repository
                     return false;
                 }
 
-                var maxID = _inMemoryDB.Chores.Max(x => x.ID);
+                var maxID = 0;
+
+                if (_inMemoryDB.Chores.Any())
+                    maxID = _inMemoryDB.Chores.Max(x => x.ID);
+
                 entity.ID = maxID + 1;
 
                 _inMemoryDB.Chores.Add(entity);

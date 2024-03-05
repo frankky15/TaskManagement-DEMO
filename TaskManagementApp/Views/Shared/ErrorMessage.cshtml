@@ -1,0 +1,16 @@
+﻿@model string
+
+@{
+	ViewData["Title"] = "Error | Task Manager";
+}
+
+@section title {
+	<div class="text-center">
+		<h2>Error: @Model</h2>
+	</div>
+}
+
+
+<div class="text-center">
+	<a class="btn btn-primary" role="button" asp-controller="home" asp-action="Index">Return Home</a>
+</div>

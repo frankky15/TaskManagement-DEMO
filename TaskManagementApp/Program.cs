@@ -7,10 +7,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+// Data Access Layer
 builder.Services.AddTransient<IUserJsonService, UserJsonService>();
 builder.Services.AddTransient<IChoreJsonService, ChoreJsonService>();
 builder.Services.AddSingleton<InMemoryDB>();
-builder.Services.AddScoped<ITestService, TestService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IChoreRepository, ChoreRepository>();
+// Service Layer
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IChoreService, ChoreService>();
+
 
 var app = builder.Build();
 
