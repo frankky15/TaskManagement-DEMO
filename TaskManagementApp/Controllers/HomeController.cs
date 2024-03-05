@@ -9,14 +9,10 @@ namespace TaskManagementApp.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
-		private readonly IUserService _userService;
-		private readonly IAuthService _authService;
 
-		public HomeController(ILogger<HomeController> logger, IUserService userservice, IAuthService authService)
+		public HomeController(ILogger<HomeController> logger)
 		{
 			_logger = logger;
-			_userService = userservice;
-			_authService = authService;
 		}
 
 		public IActionResult Index()
@@ -30,38 +26,6 @@ namespace TaskManagementApp.Controllers
 		}
 
 		public IActionResult Instructions()
-		{
-			return View();
-		}
-		
-		public IActionResult Login()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		public IActionResult Login(UserCredentials userCredentials)
-		{
-			if (!_authService.ValidateUser(userCredentials))
-				return View("ErrorMessage", (Object)"Invalid Credentials.");
-			
-			return View("Index");
-		}
-		public IActionResult Register()
-		{
-			return View();
-		}
-
-		[HttpPost]
-		public IActionResult Register(User user)
-		{
-			if (!_userService.AddUser(user))
-				return View("ErrorMessage", (Object)"There was a problem while creating the user.");
-
-			return View("UserCreated");
-		}
-
-		public IActionResult Logout()
 		{
 			return View();
 		}
