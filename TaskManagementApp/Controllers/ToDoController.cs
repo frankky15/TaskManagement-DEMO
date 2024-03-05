@@ -36,7 +36,7 @@ namespace TaskManagementApp.Controllers
 			if (chore == null || !_choreService.DeleteChore(chore))
 				return View("ErrorMessage", (object)"There was a problem while trying to delete the chore");
 
-			return View("Index");
+			return RedirectToAction("Index");
 		}
 
 		public IActionResult DeleteConfirm(int id)
