@@ -14,7 +14,7 @@ namespace TaskManagementApp.Repository
             _inMemoryDB = db;
         }
 
-        private InMemoryDB _inMemoryDB;
+        private readonly InMemoryDB _inMemoryDB;
 
         public bool Add(Chore entity)
         {
@@ -30,12 +30,9 @@ namespace TaskManagementApp.Repository
                 }
 
                 if (entity.Description == null) //Description is Optional and can be empty.
-                {
-                    Console.WriteLine("Error: description is null.");
-                    return false;
-                }
+                    entity.Description = string.Empty;
 
-                if (!IdExists(entity.UserID))
+                if (!UserIdExists(entity.UserID))
                 {
                     Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
                     return false;
@@ -49,6 +46,10 @@ namespace TaskManagementApp.Repository
                 entity.ID = maxID + 1;
 
                 _inMemoryDB.Chores.Add(entity);
+
+                var user = _inMemoryDB.Users.Where(x => x.ID == entity.UserID).First();
+                user.ChoreIDs.Add(entity.ID);
+
                 _inMemoryDB.SaveDB();
                 return true;
             }
@@ -72,7 +73,7 @@ namespace TaskManagementApp.Repository
                     return false;
                 }
 
-                if (!IdExists(entity.UserID))
+                if (!UserIdExists(entity.UserID))
                 {
                     Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
                     return false;
@@ -228,6 +229,13 @@ namespace TaskManagementApp.Repository
             return true;
         }
 
+        public bool UserIdExists(int id)
+        {
+            if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
+                return true;
+
+            return false;
+        }
         public bool IdExists(int id)
         {
             if (_inMemoryDB.Users.Where(x => x.ID == id).Any())

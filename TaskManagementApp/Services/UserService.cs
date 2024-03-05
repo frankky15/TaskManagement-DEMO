@@ -8,7 +8,7 @@ namespace TaskManagementApp.Services
 {
 	public class UserService : IUserService
 	{
-		private IUserRepository _UserRepository { get; set; }
+		private readonly IUserRepository _UserRepository;
 
 		public UserService(IUserRepository userRepository)
 		{
@@ -25,29 +25,6 @@ namespace TaskManagementApp.Services
 
 			if (!_UserRepository.Add(user))
 				return false;
-
-			return true;
-		}
-
-		public bool ValidateUser(UserCredentials userCredentials)
-		{
-			var user = _UserRepository.Get(x => x.Username == userCredentials.Username);
-			if (user == null)
-			{
-				user = _UserRepository.Get(x => x.Email == userCredentials.Email);
-
-				if (user == null)
-				{
-					Console.WriteLine($"Error: Username:'{userCredentials.Username}' or Email:'{userCredentials.Email}' Does not exist.");
-					return false;
-				}
-			}
-
-			if (user.Password != userCredentials.Password)
-			{
-				Console.WriteLine("Error: Invalid Password.");
-				return false;
-			}
 
 			return true;
 		}

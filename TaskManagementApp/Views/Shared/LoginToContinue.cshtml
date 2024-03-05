@@ -1,0 +1,16 @@
+﻿@model string
+
+@{
+	ViewData["Title"] = "Log in to continue | Task Manager";
+}
+
+@section title {
+	<div class="text-center">
+		<h2>You have to Log in to @Model</h2>
+	</div>
+}
+
+
+<div class="text-center">
+	<a class="btn btn-primary" role="button" asp-controller="home" asp-action="Login">Log in</a>
+</div>

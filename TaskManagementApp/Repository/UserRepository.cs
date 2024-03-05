@@ -13,7 +13,7 @@ namespace TaskManagementApp.Repository
             _inMemoryDB = db;
         }
 
-        private InMemoryDB _inMemoryDB;
+        private readonly InMemoryDB _inMemoryDB;
 
         public bool Add(User entity)
         {
@@ -141,7 +141,7 @@ namespace TaskManagementApp.Repository
 
             foreach (var choreId in choreIds)
             {
-                if (choreId != 0 && IdExists(choreId))
+                if (choreId != 0 && UserIdExists(choreId))
                     user.ChoreIDs.Add(choreId);
 
                 else
@@ -153,7 +153,7 @@ namespace TaskManagementApp.Repository
             return true;
         }
 
-        public bool IdExists(int id)
+        public bool UserIdExists(int id)
         {
             if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
                 return true;

@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession();
 // Data Access Layer
 builder.Services.AddTransient<IUserJsonService, UserJsonService>();
 builder.Services.AddTransient<IChoreJsonService, ChoreJsonService>();
@@ -16,6 +18,7 @@ builder.Services.AddTransient<IChoreRepository, ChoreRepository>();
 // Service Layer
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IChoreService, ChoreService>();
+builder.Services.AddTransient<IAuthService, AuthService>();
 
 
 var app = builder.Build();
@@ -34,6 +37,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",

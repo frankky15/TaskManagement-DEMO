@@ -10,11 +10,13 @@ namespace TaskManagementApp.Controllers
 	{
 		private readonly ILogger<HomeController> _logger;
 		private readonly IUserService _userService;
+		private readonly IAuthService _authService;
 
-		public HomeController(ILogger<HomeController> logger, IUserService userservice)
+		public HomeController(ILogger<HomeController> logger, IUserService userservice, IAuthService authService)
 		{
 			_logger = logger;
 			_userService = userservice;
+			_authService = authService;
 		}
 
 		public IActionResult Index()
@@ -40,7 +42,7 @@ namespace TaskManagementApp.Controllers
 		[HttpPost]
 		public IActionResult Login(UserCredentials userCredentials)
 		{
-			if (!_userService.ValidateUser(userCredentials))
+			if (!_authService.ValidateUser(userCredentials))
 				return View("ErrorMessage", (Object)"Invalid Credentials.");
 			
 			return View("Index");
