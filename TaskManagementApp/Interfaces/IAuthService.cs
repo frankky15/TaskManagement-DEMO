@@ -7,5 +7,6 @@ namespace TaskManagementApp.Interfaces
 		bool ValidateUser(UserCredentials credentials);
         bool IsUserAuthenticated();
         int GetUserId();
+        void Logout();
     }
 }

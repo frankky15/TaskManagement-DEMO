@@ -64,5 +64,10 @@ namespace TaskManagementApp.Services
                 return 0;
             }
         }
+
+        public void Logout()
+        {
+            _httpContextAccessor.HttpContext?.Session.Clear();
+        }
     }
 }
