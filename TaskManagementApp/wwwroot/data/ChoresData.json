@@ -24,14 +24,6 @@
     "UserID": 1
   },
   {
-    "ID": 4,
-    "Title": "Vacuum the living room",
-    "Description": "Vacuum the carpet and clean any visible debris.",
-    "DueDate": "2024-03-01T00:00:00",
-    "IsCompleted": false,
-    "UserID": 2
-  },
-  {
     "ID": 5,
     "Title": "Do the laundry",
     "Description": "Wash, dry, and fold the clothes.",
@@ -78,5 +70,13 @@
     "DueDate": "2024-03-09T00:00:00",
     "IsCompleted": false,
     "UserID": 3
+  },
+  {
+    "ID": 11,
+    "Title": "TestChore",
+    "Description": "",
+    "DueDate": "2024-03-07T00:00:00",
+    "IsCompleted": false,
+    "UserID": 1
   }
 ]

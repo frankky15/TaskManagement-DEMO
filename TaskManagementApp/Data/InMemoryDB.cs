@@ -38,7 +38,7 @@ namespace TaskManagementApp.Data
             foreach (var user in _users)
             {
                 Users.Add(user);
-                Console.WriteLine("Loaded User: " + user.Username + " UserID: " + user.ID);
+                // Console.WriteLine("Loaded User: " + user.Username + " UserID: " + user.ID);
             }
 
             return true;

@@ -32,12 +32,6 @@ namespace TaskManagementApp.Repository
                 if (entity.Description == null) //Description is Optional and can be empty.
                     entity.Description = string.Empty;
 
-                if (!UserIdExists(entity.UserID))
-                {
-                    Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
-                    return false;
-                }
-
                 var maxID = 0;
 
                 if (_inMemoryDB.Chores.Any())
@@ -46,9 +40,6 @@ namespace TaskManagementApp.Repository
                 entity.ID = maxID + 1;
 
                 _inMemoryDB.Chores.Add(entity);
-
-                var user = _inMemoryDB.Users.Where(x => x.ID == entity.UserID).First();
-                user.ChoreIDs.Add(entity.ID);
 
                 _inMemoryDB.SaveDB();
                 return true;
@@ -72,15 +63,6 @@ namespace TaskManagementApp.Repository
                     Console.WriteLine("Error: could not remove chore from db.");
                     return false;
                 }
-
-                if (!UserIdExists(entity.UserID))
-                {
-                    Console.WriteLine($"Error: User with ID: {entity.UserID} does not exist.");
-                    return false;
-                }
-
-                var targetUser = _inMemoryDB.Users.Where(x => x.ID == entity.UserID).First();
-                targetUser.ChoreIDs.Remove(entity.ID);
 
                 _inMemoryDB.SaveDB();
 
@@ -229,16 +211,9 @@ namespace TaskManagementApp.Repository
             return true;
         }
 
-        public bool UserIdExists(int id)
-        {
-            if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
-                return true;
-
-            return false;
-        }
         public bool IdExists(int id)
         {
-            if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
+            if (_inMemoryDB.Chores.Where(x => x.ID == id).Any())
                 return true;
 
             return false;

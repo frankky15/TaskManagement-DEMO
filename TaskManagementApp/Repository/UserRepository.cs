@@ -129,7 +129,30 @@ namespace TaskManagementApp.Repository
             return filteredUsers;
         }
 
-        public bool UpdateChores(ICollection<int> choreIds, int userId)
+        public bool AddChore(int choreId, int userId)
+        {
+            var user = GetById(userId);
+
+            if (user == null)
+            {
+                Console.WriteLine($"Error: Couldn't find User with ID: {userId}");
+                return false;
+            }
+
+            if (choreId == 0)
+            {
+                Console.WriteLine($"Error: Invalid choreId. ({choreId})");
+                return false;
+            }
+
+            user.ChoreIDs.Add(choreId);
+
+            _inMemoryDB.SaveDB();
+
+            return true;
+        }
+
+        public bool AddChores(ICollection<int> choreIds, int userId)
         {
             if (choreIds.Count == 0)
             {
@@ -137,23 +160,62 @@ namespace TaskManagementApp.Repository
                 return false;
             }
 
-            var user = GetById(userId);
-
             foreach (var choreId in choreIds)
             {
-                if (choreId != 0 && UserIdExists(choreId))
-                    user.ChoreIDs.Add(choreId);
-
-                else
-                    Console.WriteLine("Error: Invalid choreId.");
+                if (!AddChore(choreId, userId))
+                    Console.WriteLine($"Error: Couldn't add ChoreID. ({choreId})");
             }
+
+            return true;
+        }
+
+        public bool DeleteChore(int choreId, int userId)
+        {
+            var user = GetById(userId);
+
+            if (user == null)
+            {
+                Console.WriteLine($"Error: Couldn't find User with ID: {userId}");
+                return false;
+            }
+
+            if (choreId == 0)
+            {
+                Console.WriteLine($"Error: Invalid choreId. ({choreId})");
+                return false;
+            }
+
+            if (!user.ChoreIDs.Any(x => x == choreId))
+            {
+                Console.WriteLine($"Error: User doesn't have that choreId. ({choreId})");
+                return false;
+            }
+
+            if (!user.ChoreIDs.Remove(choreId))
+                Console.WriteLine($"Error: Couldn't remove ChoreID. ({choreId})");
 
             _inMemoryDB.SaveDB();
 
             return true;
         }
 
-        public bool UserIdExists(int id)
+        public bool DeleteChores(ICollection<int> choreIds, int userId)
+        {
+            if (choreIds.Count == 0)
+            {
+                Console.WriteLine("Error: Did not provide any chore ids to add to the user list.");
+                return false;
+            }
+
+            foreach (var choreId in choreIds)
+            {
+                DeleteChore(choreId, userId);
+            }
+
+            return true;
+        }
+
+        public bool IdExists(int id)
         {
             if (_inMemoryDB.Users.Where(x => x.ID == id).Any())
                 return true;

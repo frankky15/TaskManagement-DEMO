@@ -29,6 +29,38 @@ namespace TaskManagementApp.Services
 			return true;
 		}
 
+		public bool AddChore(int choreId, int userId)
+		{
+			if (!_UserRepository.AddChore(choreId, userId))
+				return false;
+
+			return true;
+		}
+
+		public bool AddChores(ICollection<int> choreIds, int userId)
+		{
+			if (!_UserRepository.AddChores(choreIds, userId))
+				return false;
+
+			return true;
+		}
+
+		public bool DeleteChore(int choreId, int userId)
+		{
+			if (!_UserRepository.DeleteChore(choreId, userId))
+				return false;
+
+			return true;
+		}
+
+		public bool DeleteChores(ICollection<int> choreIds, int userId)
+		{
+			if (!_UserRepository.DeleteChores(choreIds, userId))
+				return false;
+
+			return true;
+		}
+
 		private bool IsPasswordValid(string password)
 		{
 			// Regular expression pattern

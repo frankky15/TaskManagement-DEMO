@@ -21,13 +21,13 @@ namespace TaskManagementApp.Services
 			return chores;
 		}
 
-		public Chore GetChoreById(int id, int userId)
+		public Chore GetChoreById(int id)
 		{			
 			var chore = _ChoreRepository.GetById(id);
 			return chore;
 		}
 
-		public bool DeleteChore(Chore chore, int userId)
+		public bool DeleteChore(Chore chore)
 		{
 			if (!_ChoreRepository.Delete(chore))
 				return false;
@@ -35,10 +35,8 @@ namespace TaskManagementApp.Services
 			return true;
 		}
 
-		public bool AddChore(Chore chore, int userId)
+		public bool AddChore(Chore chore)
 		{
-			chore.UserID = userId;
-
 			if (!_ChoreRepository.Add(chore))
 				return false;
 

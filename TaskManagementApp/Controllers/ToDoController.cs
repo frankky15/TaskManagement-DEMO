@@ -7,11 +7,13 @@ namespace TaskManagementApp.Controllers
 {
 	public class ToDoController : Controller
 	{
+		private readonly IUserService _userService;
 		private readonly IChoreService _choreService;
 		private readonly IAuthService _authService;
 
-		public ToDoController(IChoreService choreService, IAuthService authService)
+		public ToDoController(IUserService userService, IChoreService choreService, IAuthService authService)
 		{
+			_userService = userService;
 			_choreService = choreService;
 			_authService = authService;
 		}
@@ -33,29 +35,13 @@ namespace TaskManagementApp.Controllers
 			if (!_authService.IsUserAuthenticated())
 				return View("LoginToContinue", (Object)"see the details of your chores.");
 
-			var chore = _choreService.GetChoreById(id, _authService.GetUserId());
-			return View(chore);
-		}
+			var chore = _choreService.GetChoreById(id);
+			if (chore == null)
+				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
 
-		public IActionResult DeleteChore(int id)
-		{
-			if (!_authService.IsUserAuthenticated())
-				return View("LoginToContinue", (Object)"delete a chore.");
+			if (chore.UserID != _authService.GetUserId())
+				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
 
-			var chore = _choreService.GetChoreById(id, _authService.GetUserId());
-
-			if (chore == null || !_choreService.DeleteChore(chore, _authService.GetUserId()))
-				return View("ErrorMessage", (object)"There was a problem while trying to delete the chore");
-
-			return RedirectToAction("Index");
-		}
-
-		public IActionResult DeleteConfirm(int id)
-		{
-			if (!_authService.IsUserAuthenticated())
-				return View("LoginToContinue", (Object)"delete a chore.");
-
-			var chore = _choreService.GetChoreById(id, _authService.GetUserId());
 			return View(chore);
 		}
 
@@ -73,14 +59,51 @@ namespace TaskManagementApp.Controllers
 			if (!_authService.IsUserAuthenticated())
 				return View("LoginToContinue", (Object)"create a chore.");
 
-			if (!_choreService.AddChore(chore, _authService.GetUserId()))
-			{
-				string errorMessage = "There was a problem while trying to create a new chore";
+			chore.UserID = _authService.GetUserId();
 
-				return RedirectToAction("ErrorMessage", "Home", new { message = errorMessage });
-			}
+			if (!_choreService.AddChore(chore))
+				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to create a new chore.");
+
+			if (!_userService.AddChore(chore.ID, chore.UserID))
+				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to save the chore to the user's list.");
 
 			return View("ChoreCreated");
+		}
+
+		public IActionResult DeleteConfirm(int id)
+		{
+			if (!_authService.IsUserAuthenticated())
+				return View("LoginToContinue", (Object)"delete a chore.");
+
+			var chore = _choreService.GetChoreById(id);
+			if (chore == null)
+				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
+
+			if (chore.UserID != _authService.GetUserId())
+				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
+
+			return View(chore);
+		}
+
+		public IActionResult DeleteChore(int id)
+		{
+			if (!_authService.IsUserAuthenticated())
+				return View("LoginToContinue", (Object)"delete a chore.");
+
+			var chore = _choreService.GetChoreById(id);
+			if (chore == null)
+				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
+
+			if (chore.UserID != _authService.GetUserId())
+				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
+
+			if (!_userService.DeleteChore(chore.ID, chore.UserID))
+				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to Delete the chore from the user's list.");
+
+			if (!_choreService.DeleteChore(chore))
+				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to delete the chore");
+
+			return RedirectToAction("Index");
 		}
 
 		public IActionResult ErrorMessage(string message)
