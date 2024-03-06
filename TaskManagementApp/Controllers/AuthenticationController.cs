@@ -48,10 +48,5 @@ namespace TaskManagementApp.Controllers
 			_authService.Logout();
 			return RedirectToAction("Index", "Home");
 		}
-
-		public IActionResult ErrorMessage(string message)
-		{
-			return View((object)message);
-		}
 	}
 }

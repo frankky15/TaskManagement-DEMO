@@ -37,10 +37,10 @@ namespace TaskManagementApp.Controllers
 
 			var chore = _choreService.GetChoreById(id);
 			if (chore == null)
-				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
+				return View("ErrorMessage", (object)"Chore Doesn't exist.");
 
 			if (chore.UserID != _authService.GetUserId())
-				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
+				return View("ErrorMessage", (object)"You Don't have permission to access that chore.");
 
 			return View(chore);
 		}
@@ -62,10 +62,10 @@ namespace TaskManagementApp.Controllers
 			chore.UserID = _authService.GetUserId();
 
 			if (!_choreService.AddChore(chore))
-				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to create a new chore.");
+				return View("ErrorMessage", (object)"There was a problem while trying to create a new chore.");
 
 			if (!_userService.AddChore(chore.ID, chore.UserID))
-				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to save the chore to the user's list.");
+				return View("ErrorMessage", (object)"There was a problem while trying to save the chore to the user's list.");
 
 			return View("ChoreCreated");
 		}
@@ -77,10 +77,10 @@ namespace TaskManagementApp.Controllers
 
 			var chore = _choreService.GetChoreById(id);
 			if (chore == null)
-				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
+				return View("ErrorMessage", (object)"Chore Doesn't exist.");
 
 			if (chore.UserID != _authService.GetUserId())
-				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
+				return View("ErrorMessage", (object)"You Don't have permission to access that chore.");
 
 			return View(chore);
 		}
@@ -92,23 +92,18 @@ namespace TaskManagementApp.Controllers
 
 			var chore = _choreService.GetChoreById(id);
 			if (chore == null)
-				return RedirectToAction("ErrorMessage", (object)"Chore Doesn't exist.");
+				return View("ErrorMessage", (object)"Chore Doesn't exist.");
 
 			if (chore.UserID != _authService.GetUserId())
-				return RedirectToAction("ErrorMessage", (object)"You Don't have permission to access that chore.");
+				return View("ErrorMessage", (object)"You Don't have permission to access that chore.");
 
 			if (!_userService.DeleteChore(chore.ID, chore.UserID))
-				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to Delete the chore from the user's list.");
+				return View("ErrorMessage", (object)"There was a problem while trying to Delete the chore from the user's list.");
 
 			if (!_choreService.DeleteChore(chore))
-				return RedirectToAction("ErrorMessage", (object)"There was a problem while trying to delete the chore");
+				return View("ErrorMessage", (object)"There was a problem while trying to delete the chore");
 
 			return RedirectToAction("Index");
-		}
-
-		public IActionResult ErrorMessage(string message)
-		{
-			return View((object)message);
 		}
 	}
 }
