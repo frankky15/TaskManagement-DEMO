@@ -42,5 +42,15 @@ namespace TaskManagementApp.Services
 
 			return true;
 		}
+
+		public bool CompleteChore(Chore chore)
+		{
+			chore.IsCompleted ^= true;
+			
+			if (!_ChoreRepository.Update(chore))
+				return false;
+
+			return true;
+		}
 	}
 }

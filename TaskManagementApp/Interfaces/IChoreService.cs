@@ -8,5 +8,6 @@ namespace TaskManagementApp.Interfaces
 		Chore GetChoreById(int id);
 		bool DeleteChore(Chore chore);
 		bool AddChore(Chore chore);
+		bool CompleteChore(Chore chore);
 	}
 }

@@ -17,15 +17,43 @@
   </svg>
   Add Chore</a>
 
-<ul>
-  @foreach (var chore in Model)
-  {
-    <li>
-      @chore.Title
-      <a class="btn btn-link" role="button" asp-controller="todo" asp-action="details"
-        asp-route-id="@chore.ID">Details</a>
-      <a class="btn btn-link" role="button" asp-controller="todo" asp-action="deleteconfirm"
-        asp-route-id="@chore.ID">Delete</a>
-    </li>
+<br>
+
+<div name="Chore-List">
+  <ul>
+    @foreach (var chore in Model)
+    {
+      <li>
+        @if (chore.IsCompleted)
+        {
+          <span class="text-success">@chore.Title</span>
+        }
+        else
+        {
+          if (chore.DueDate.ToShortDateString() == DateTime.Today.ToShortDateString())
+          {
+            <span class="text-warning">@chore.Title</span>
+          }
+          else
+          {
+            <span>@chore.Title</span>
+          }
+        }
+
+        <a class="btn btn-link" role="button" asp-controller="todo" asp-action="details"
+          asp-route-id="@chore.ID">Details</a>
+        <a class="btn btn-link" role="button" asp-controller="todo" asp-action="deleteconfirm"
+          asp-route-id="@chore.ID">Delete</a>
+
+          <input class="form-check-input" type="checkbox" value="@chore.IsCompleted"
+            checked="@chore.IsCompleted" asp-for="@chore.IsCompleted" onclick="toggleState(@chore.ID)">
+      </li>
+    }
+  </ul>
+</div>
+
+<script>
+  function toggleState(choreId) {
+    location.href = '@Url.Action("CompleteChore", "ToDo")' + '?id=' + encodeURIComponent(choreId);
   }
-</ul>
+</script>

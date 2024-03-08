@@ -15,7 +15,7 @@
     "ID": 2,
     "Username": "user2",
     "Email": "user2@example.com",
-    "Password": "password2",
+    "Password": "s",
     "ChoreIDs": [
       5,
       6

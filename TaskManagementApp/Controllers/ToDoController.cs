@@ -105,5 +105,23 @@ namespace TaskManagementApp.Controllers
 
 			return RedirectToAction("Index");
 		}
+
+		public IActionResult CompleteChore(int id)
+		{
+			if (!_authService.IsUserAuthenticated())
+				return View("LoginToContinue", (Object)"complete a chore.");
+
+			var chore = _choreService.GetChoreById(id);
+			if (chore == null)
+				return View("ErrorMessage", (object)"Chore Doesn't exist.");
+
+			if (chore.UserID != _authService.GetUserId())
+				return View("ErrorMessage", (object)"You Don't have permission to access that chore.");
+
+			if (!_choreService.CompleteChore(chore))
+				return View("ErrorMessage", (object)"There was a problem while trying to complete the chore");
+
+			return RedirectToAction("Index");
+		}
 	}
 }
