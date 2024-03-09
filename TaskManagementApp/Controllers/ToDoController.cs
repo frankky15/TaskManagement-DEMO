@@ -70,6 +70,35 @@ namespace TaskManagementApp.Controllers
 			return View("ChoreCreated");
 		}
 
+		public IActionResult EditChore(int id)
+		{
+			if (!_authService.IsUserAuthenticated())
+				return View("LoginToContinue", (Object)"edit a chore.");
+
+			var chore = _choreService.GetChoreById(id);
+			if (chore == null)
+				return View("ErrorMessage", (object)"Chore Doesn't exist.");
+
+			if (chore.UserID != _authService.GetUserId())
+				return View("ErrorMessage", (object)"You Don't have permission to access that chore.");
+
+			return View(chore);
+		}
+
+		[HttpPost]
+		public IActionResult EditChore(Chore chore)
+		{
+			if (!_authService.IsUserAuthenticated())
+				return View("LoginToContinue", (Object)"edit a chore.");
+
+			chore.UserID = _authService.GetUserId();
+
+			if (!_choreService.EditChore(chore))
+				return View("ErrorMessage", (object)"There was a problem while trying to edit a chore.");
+
+			return RedirectToAction("Index");
+		}
+
 		public IActionResult DeleteConfirm(int id)
 		{
 			if (!_authService.IsUserAuthenticated())

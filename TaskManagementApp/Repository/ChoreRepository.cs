@@ -198,7 +198,6 @@ namespace TaskManagementApp.Repository
                 chore.Title = entity.Title;
                 chore.Description = entity.Description;
                 chore.DueDate = entity.DueDate;
-                chore.IsCompleted = entity.IsCompleted;
 
                 _inMemoryDB.SaveDB();
             }

@@ -7,8 +7,7 @@
     "ChoreIDs": [
       1,
       2,
-      3,
-      11
+      3
     ]
   },
   {
@@ -17,6 +16,7 @@
     "Email": "user2@example.com",
     "Password": "s",
     "ChoreIDs": [
+      4,
       5,
       6
     ]

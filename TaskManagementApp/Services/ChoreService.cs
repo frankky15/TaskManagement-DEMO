@@ -22,7 +22,7 @@ namespace TaskManagementApp.Services
 		}
 
 		public Chore GetChoreById(int id)
-		{			
+		{
 			var chore = _ChoreRepository.GetById(id);
 			return chore;
 		}
@@ -43,10 +43,18 @@ namespace TaskManagementApp.Services
 			return true;
 		}
 
+		public bool EditChore(Chore chore)
+		{
+			if (!_ChoreRepository.Update(chore))
+				return false;
+
+			return true;
+		}
+
 		public bool CompleteChore(Chore chore)
 		{
 			chore.IsCompleted ^= true;
-			
+
 			if (!_ChoreRepository.Update(chore))
 				return false;
 
