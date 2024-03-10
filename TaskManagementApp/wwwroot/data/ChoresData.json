@@ -12,7 +12,7 @@
     "Title": "Take out the trash",
     "Description": "Empty all trash cans and take the bags to the dumpster.",
     "DueDate": "2024-03-02T00:00:00",
-    "IsCompleted": true,
+    "IsCompleted": false,
     "UserID": 1
   },
   {
@@ -25,17 +25,17 @@
   },
   {
     "ID": 4,
-    "Title": "Do the sapelaundry",
-    "Description": "Wash, dry, and fold the uwu.",
-    "DueDate": "2024-04-20T00:00:00",
-    "IsCompleted": true,
+    "Title": "Vacuum the living room",
+    "Description": "Vacuum the carpet and clean any visible debris.",
+    "DueDate": "2024-03-01T00:00:00",
+    "IsCompleted": false,
     "UserID": 2
   },
   {
     "ID": 5,
-    "Title": "Do the laundry again xd",
+    "Title": "Do the laundry",
     "Description": "Wash, dry, and fold the clothes.",
-    "DueDate": "2024-03-08T00:00:00",
+    "DueDate": "2024-03-04T00:00:00",
     "IsCompleted": false,
     "UserID": 2
   },
