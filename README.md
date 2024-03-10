@@ -1,0 +1,89 @@
+This is a Demo for an ASP.NET Core 8.0 MVC Web App using a JSON db. 
+
+# Instructions
+
+(This is the content in the Instructions Page)
+
+<div name="Login-and-Registration">
+    <h3>Login and Registration</h3>
+
+  <div>
+        <p>First You should start by <a asp-controller="authentication" asp-action="register">creating an account</a>.
+        </p>
+        <p>After creating an acount you can <a asp-controller="authentication" asp-action="login">Login</a>.</p>
+        <p>You'll need to be logged in to perform actions such as viewing and managing your chores.</p>
+        <p>After you are done with your tasking session, you can logout if you want.</p>
+    </div>
+</div>
+<br>
+<div name="Creating-a-Chore">
+    <h3>Creating a Chore</h3>
+
+  <div>
+        <p>In order to Create a task you first have to go to the <a asp-controller="todo" asp-action="index">To Do</a>
+            tab,there you'll the 'Create Chore' button.</p>
+        <p>After clicking on the 'Create Chore' button, you'll be presented with a form that you can fill in with the
+            details of your chore.</p>
+        <p>There are two obligatory fields in order to save the chore, 'Title' and 'Due Date'.</p>
+        <p>If you are happy with your Chore, click 'Save' and you'll be redirected to the <a asp-controller="todo"
+                asp-action="index">To Do</a>'s page, where you can
+            see your newly created Chore.</p>
+    </div>
+</div>
+<br>
+<div name="Chore-Details">
+    <h3>Chore Details</h3>
+
+  <div>
+        <p>After creating a chore you can check out it's details by going to the <a asp-controller="todo"
+                asp-action="index">To Do</a>'s page and clicking on the 'Details' button right next to the Chore.</p>
+    </div>
+</div>
+<br>
+<div name="Edit-a-Chore">
+    <h3>Edit a Chore</h3>
+
+  <div>
+        <p>If you want to make some changes to the chore, you can do so by going to the <a asp-controller="todo"
+                asp-action="index">To Do</a>'s page and clicking on the 'Edit' button right next
+            to the chore, then you'll be presented with an edit form.</p>
+        <p>When you are happy with the changes click 'Save'.</p>
+    </div>
+</div>
+<br>
+<div name="Complete-a-Chore">
+    <h3>Complete a Chore</h3>
+
+  <div>
+        <p>If you have already done the chore, and you need to mark it as completed in the Task Manager, you can do so
+            by going to the <a asp-controller="todo" asp-action="index">To Do</a>'s page and clicking on the Checkbox
+            right next
+            to the chore.</p>
+        <p>If you click on the Checkbox you'll see it change colors to <span class="text-success">Green</span>, that
+            means it's marked as
+            completed.</p>
+    </div>
+</div>
+<br>
+<div name="Chore-Status">
+    <h3>Chore Status</h3>
+
+  <div>
+        <p>You may be familiar the <span class="text-success">Green</span> color in the Chore's list, that is a status
+            that means the chore
+            is completed. But there are a couple other status you should be familiar.</p>
+        <p>The <span class="text-warning">Yellow</span> status means the task is assigned to the running day.. so,
+            TODAY!! and you better start moving.</p>
+        <p>The <span class="text-danger">Red</span> status means, you've already missed the date.</p>
+    </div>
+</div>
+<br>
+<div name="Delete-a-Chore">
+    <h3>Delete a Chore</h3>
+
+  <div>
+        <p>If you are not happy with your chore, or just want to delete it, you can do so by going to the <a
+                asp-controller="todo" asp-action="index">To Do</a>'s page and clicking on the 'Delete' button right next
+            to the chore, where you'll be prompted with a confirmation, so you don't delete it by accident.</p>
+    </div>
+</div>
