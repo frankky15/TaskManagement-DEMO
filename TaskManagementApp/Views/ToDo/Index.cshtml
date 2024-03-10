@@ -30,7 +30,11 @@
         }
         else
         {
-          if (chore.DueDate.ToShortDateString() == DateTime.Today.ToShortDateString())
+          if (chore.DueDate < DateTime.Today)
+          {
+            <span class="text-danger">@chore.Title</span>
+          }
+          else if (chore.DueDate.ToShortDateString() == DateTime.Today.ToShortDateString())
           {
             <span class="text-warning">@chore.Title</span>
           }
